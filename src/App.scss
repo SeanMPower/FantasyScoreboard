@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.App-container {
+  background-color: #181c28;
+  font-family: 'Graduate', cursive;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  height: fit-content;
+  margin: 10px 440px 0px 440px;
+  padding-bottom: 5px;
+  background-color: rgba(58,70,91,0.5);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #1f2431 10px solid;
+  font-size: 3rem;
+  text-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
