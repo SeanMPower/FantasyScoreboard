@@ -3,26 +3,34 @@ import axios from 'axios';
 
 import './MatchupCard.scss';
 
-function MatchupCard() {
-    const [matchupData, setMatchupData] = useState({})
-    const [matchupDataFetched, setMatchupDataFetched] = useState(false);
+function MatchupCard(props) {
+    const [matchupData, setMatchupData] = useState([])
+
+    let refreshData;
+
+    const getMatchupData = () => {
+        axios({
+            method: 'get',
+            url: props.apiUrl,
+        }).then(res => {
+            setMatchupData(res.data)
+            clearInterval(refreshData)
+            refreshData = setInterval(getMatchupData, 15000)
+            console.log(res.data)
+        })
+    }
 
     useEffect(() => {
-        axios.get('https://api.sleeper.app/v1/league/652518774834044928/matchups/8')
-                .then(res => {
-                    setMatchupData(res.data[0])
-                    setMatchupDataFetched(true)
-                })
-        console.log(matchupData);
-    }, [matchupDataFetched])
+        getMatchupData()
+    }, []);
 
     return (
-      <div className="matchup-card-container">
+      <div className="matchup-card">
           <div className="matchup-hero">
-              {/* Hero: {matchupData.points} */}
+              Hero: {matchupData[props.heroIndex] ? matchupData[props.heroIndex].points : 0}
           </div>
           <div className="matchup-villan">
-              
+              Villain: {matchupData[props.villainIndex] ? matchupData[props.villainIndex].points : 0}
           </div>
       </div>
     );
