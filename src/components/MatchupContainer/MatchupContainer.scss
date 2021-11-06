@@ -1,20 +1,20 @@
 .matchup-container {
-    width: auto;
-    min-height: 70vh;
+    width: 85vw;
+    min-height: calc(85vh - 120px);
     height: fit-content;
-    margin: 20px 20px 0px 20px;
-    padding-bottom: 5px;
-    background-color: rgba(58,70,91,0.5);
-    border-radius: 20px;
+    margin: 5px 0px 16px 10px;
     display: flex;
     flex-direction: column;
-    border: #1f2431 10px solid;
+    border: forestgreen 10px solid;
+    border-right: 0;
+    color: black;
     font-size: 3rem;
-    text-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
     padding: 20px; 
 
     .matchup-card-header {
         font-size: 24px;
-        color: gray;
+        font-weight: 700;
+        color: black;
     }
 }
