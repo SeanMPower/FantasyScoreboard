@@ -1,0 +1,15 @@
+.sidebar {
+    min-width: 15vw;
+    width: auto;
+    min-height: calc(85vh - 120px);
+    height: fit-content;
+    margin: 5px 10px 16px -10px;
+    display: flex;
+    flex-direction: column;
+    border: forestgreen 10px solid;
+    border-left: 0;
+    color: black;
+    font-size: 3rem;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px; 
+}
