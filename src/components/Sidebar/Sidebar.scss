@@ -1,9 +1,7 @@
 .sidebar {
-    min-width: 15vw;
-    width: auto;
-    min-height: calc(85vh - 120px);
-    height: fit-content;
-    margin: 5px 10px 16px 0px;
+    min-width: 180px;
+    max-width: 15vw;
+    margin: 10px 10px 10px 0px;
     display: flex;
     flex-direction: column;
     border: forestgreen 10px solid;
