@@ -8,7 +8,7 @@ function MatchupContainer() {
       <div className="matchup-container">
           <div id="week-selector">
             <label for="nfl-week-selector">Week:</label>
-            <select name="nfl-week" id="nfl-week">
+            <select name="nfl-week" id="nfl-week" defaultValue="9">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -17,7 +17,7 @@ function MatchupContainer() {
                 <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
-                <option value="9" selected>9</option>
+                <option value="9">9</option>
                 <option value="10">10</option>
                 <option value="11">11</option>
                 <option value="12">12</option>
@@ -33,13 +33,13 @@ function MatchupContainer() {
           <MatchupCard
             apiUrl={'https://api.sleeper.app/v1/league/652518774834044928/matchups/9'}
             heroIndex={0}
-            villainIndex={1}
+            villainIndex={9}
           />
           <span className='matchup-card-header'>Megalabowl</span>
           <MatchupCard
             apiUrl={'https://api.sleeper.app/v1/league/740771306848673792/matchups/9'}
             heroIndex={2}
-            villainIndex={6}
+            villainIndex={3}
           />
       </div>
     );

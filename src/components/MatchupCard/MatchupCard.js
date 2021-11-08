@@ -16,7 +16,6 @@ function MatchupCard(props) {
             setMatchupData(res.data)
             clearInterval(refreshData)
             refreshData = setInterval(getMatchupData, 15000)
-            console.log(res.data)
         })
     }
 
@@ -27,10 +26,10 @@ function MatchupCard(props) {
     return (
       <div className="matchup-card">
           <div className="matchup-hero">
-              Hero: {matchupData[props.heroIndex] ? matchupData[props.heroIndex].points : 0}
+              Hero: {matchupData[props.heroIndex] ? matchupData[props.heroIndex].points.toFixed(2) : 0}
           </div>
           <div className="matchup-villan">
-              Villain: {matchupData[props.villainIndex] ? matchupData[props.villainIndex].points : 0}
+              Villain: {matchupData[props.villainIndex] ? matchupData[props.villainIndex].points.toFixed(2) : 0}
           </div>
       </div>
     );
